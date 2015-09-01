@@ -10,7 +10,6 @@
 			Reveal.left();
 		}
 		else if (snapshot.val() === "FIST") {
-			Reveal.down();
 			if(!Reveal.down() && Reveal.getIndices().h == 2){
 				var event = new CustomEvent('mousedown', {
 					detail: {
