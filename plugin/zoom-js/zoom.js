@@ -7,11 +7,9 @@
 
 		var zoomPadding = 20;
 		var revealScale = Reveal.getScale();
+		if( (event[ modifier ] || event.detail.target) && isEnabled ) {
 
-		if( event[ modifier ] && isEnabled ) {
-			event.preventDefault();
-
-			var bounds = event.target.getBoundingClientRect();
+			var bounds = event.detail.target ? event.detail.target.getBoundingClientRect() : event.target.getBoundingClientRect();
 
 			zoom.to({
 				x: ( bounds.left * revealScale ) - zoomPadding,
@@ -273,6 +271,3 @@ var zoom = (function(){
 	}
 
 })();
-
-
-
