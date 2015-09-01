@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Myo Firebase presentation</title>
+
+		<meta name="author" content="Snorre Lothar von Gohren Edwin">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/myopress.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img class="light" src="images/light-bulb-off.png">
+					<aside class="notes">
+				        Vise hvor lett det er å være deres egen mann!
+				    </aside>
+				</section>
+
+				<section>
+					<p>Utstyret brukt</p>
+					<p>Kode</p>
+					<p>Fortelle hva som ligger bak</p>
+				    <aside class="notes">
+						Relee, Raspberry pi, Particle photon,  klipt ledning, men trengs ikke
+						JohnnyFive, Firebase, supersimpelt.
+						Det som nå ligger bak er egentlig forløpig en usikkret firebase.
+					</aside>
+				</section>
+
+				<section>
+					<img class="love" src="images/lightning-bolt.png">
+					<h2 class="love">+</h2>
+					<img class="love" src="images/relay-connection.jpg">
+					<h2 class="love">=</h2>
+					<img class="love" src="images/heart_PNG702.png">
+				    <aside class="notes">
+						Dette er kilden til styringen av sterkstrøma
+						Finnes i 1,2,4 +++ moduler.
+					</aside>
+				</section>
+
+				<section>
+					<h2 class="lovex2">Kontrollenhet</h2>
+					<h2 class="love">+</h2>
+					<img class="love" src="images/cloud.png">
+					<h2 class="love">=</h2>
+					<img class="love" src="images/connection.png">
+					<aside class="notes">
+						Trenger en kontrollenhet
+						Noe cloud kobling
+						Gir oss en kobling til verden!
+					</aside>
+				</section>
+				<section>
+					<section>
+						<h1>Setup nr.1</h1>
+						<img class="smaller" src="images/raspberrypi.jpg">
+						<aside class="notes">
+							Raspberry pi var det første jeg prøvde på.
+							Har ikke analoge pins
+						</aside>
+					</section>
+					<section>
+						<img class="love" src="images/raspberrypi.jpg">
+						<h2 class="love">+</h2>
+						<img class="love" src="images/firebase_branding_r4_FINAL_03.png">
+						<h2 class="love">=</h2>
+						<img class="love" src="images/thumbsupsponge.png">
+						<aside class="notes">
+							Gikk for Firebase. Kraftig web api for lagre og synce date realtime.
+							Støtte for flere forskjellige platformer!
+							Men skal ikke gå i dybden på det, se på dette som skyen!
+						</aside>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+					<div class="support">
+						<p>Android</p>
+						<p>iOS</p>
+						<p>Web</p>
+						<p>ServerSentEvents</p>
+					</div>
+					<img src="images/firebase_branding_r4_FINAL_03.png">
+
+				    <aside class="notes">
+				    	Gikk for Firebase. Kraftig web api for lagre og synce date realtime. Støtte for flere forskjellige platformer! iOS, Android, Javascript, REST api med støtte for EventSource / Server-Sent Events protocol! Mange som har hørt om det?
+					</aside>
+					</section>
+					<section>
+						<img src="images/firebasedashboard.png">
+						<p class= "fragment">https://myopres.firebaseio.com/nivå1/nivå2/nivå3/nivå4 osv...</p>
+					</section>
+					<aside class="notes">
+				    	Kan man få en ganske stort tre om du ønsker.
+				    	Det spørres på url
+					</aside>
+				</section>
+
+				<section>
+					<section>
+						<h1>App Demo</h1>
+					</section>
+					<section>
+						<img src="images/revealplugin.png">
+						<aside class="notes">
+					    	Mange som har brukt reveal før? Lagd plugin?
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>SSE Demo</h1>
+						<aside class="notes">
+							Tenkte bare å vise at det enkelt kan integrees med hvilken som helst backend
+						</aside>
+					</section>
+					<section>
+						<img src="images/golang.png">
+						<aside class="notes">
+							Satt i påsken og tenkte jeg begynne å lære meg litt go. Kombinere oppgavene. Fant et bibliotek. Litt modifisering
+						</aside>
+					</section>
+					<section>
+						<img src="images/goLangCode.png">
+						<p class= "fragment eventStreamBox borderBox"></p>
+						<p class= "fragment bufferBox borderBox"></p>
+						<aside class="notes">
+							100 linjers fil som enkelt kan brukes
+							Get request with accept text/event-stream
+							Bufio scanner fordi man har nå en stream som man kjører over.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<img src="images/question_mark_drawn.png">
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); }},
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/myo/myo.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
