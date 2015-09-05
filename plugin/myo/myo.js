@@ -22,13 +22,22 @@
 
 		}
 		else if (snapshot.val() === "FINGERS_SPREAD") {
+			if(Reveal.getIndices().h == 5 && Reveal.getIndices().v == 2) {
+				turnOnLight();
+				return;
+			}
 			if(!Reveal.up()){
-				light = !light;
-				myLightRef.set({'switch':light});
-
-				document.querySelector('.light').src = 'http://0.0.0.0:9000/images/light-bulb-'+(light?'on':'off')+'.png'
+				turnOnLight();
 			}
 
 		}
 	})
+
+	var turnOnLight = function() {
+		light = !light;
+		myLightRef.set({'switch':light});
+		console.log(window.location);
+		document.querySelector('.light').src = 'http://'+window.location.host+'/images/light-bulb-'+(light?'on':'off')+'.png'
+
+	}
 })()
